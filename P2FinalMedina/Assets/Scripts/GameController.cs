@@ -10,6 +10,7 @@ public class GameController : MonoBehaviour {
     public static GameController instance;
     public GameObject gameOverText;
     public bool gameOver = false;
+    public float scrollSpeed = -1.5f;
 
     // Start is called before the first frame update
     void Awake()
@@ -27,7 +28,7 @@ public class GameController : MonoBehaviour {
     {
         if (gameOver == true && Input.GetMouseButtonDown (0))
         {
-
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 
